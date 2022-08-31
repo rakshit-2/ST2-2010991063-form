@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            .display{
+                width:100%;
+                height:5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                border:1px solid black;
+            }
+            .left{
+                width:30%;
+                height:100%;
+                border:1px solid red;
+            }
+            .right{
+                width:65%;
+                height:100%;
+                border:1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.addEventListener('load',()=>{
+                var res = JSON.parse(localStorage.getItem("data"));
+                // console.log(res)    
+                const ele=document.querySelector("body");
+                var li=[res.name.firstName,res.name.lastname,
+                res.dob.day,res.dob.month,res.dob.year,
+                res.email,res.phone,res.gender,res.address,res.city,
+                res.pincode,res.state,res.country,res.hobbies,res.hobbie_field,
+                res.qualifications.classX,res.qualifications.classXII,res.qualifications.twlis,res.qualifications.graduation,res.qualifications.masters,
+                res.applied];
+                for(var i=0;i<li.length;i++)
+                {
+                    document.write(li[i]+"<br>");
+                }
+                
+
+            })
+        </script>
+    </body>
+</html>
